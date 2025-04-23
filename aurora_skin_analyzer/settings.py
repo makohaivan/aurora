@@ -27,7 +27,9 @@ SECRET_KEY = 'django-insecure-0z@@#95tcp^4lu@*!-l=o5rknq@_(qjt0ahw_cvh!ngvku8y1g
 DEBUG = False
 
 ALLOWED_HOSTS = [
-    
+    'aurora-sztx.onrender.com',
+    'localhost',
+    '127.0.0.1'
 ]
 
 

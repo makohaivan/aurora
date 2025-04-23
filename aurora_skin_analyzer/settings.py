@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -26,7 +27,7 @@ SECRET_KEY = 'django-insecure-0z@@#95tcp^4lu@*!-l=o5rknq@_(qjt0ahw_cvh!ngvku8y1g
 DEBUG = False
 
 ALLOWED_HOSTS = [
-    'https://us-central1-aurora-457407.cloudfunctions.net/predict',
+    
 ]
 
 
@@ -143,6 +144,12 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
 STATIC_URL = 'static/'
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MAX_UPLOAD_SIZE = 20 * 1024 * 1024  # 20MB
+
+AI_SERVICE_URL = 'https://us-central1-aurora-457407.cloudfunctions.net/predict'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
